@@ -1,19 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_responsive_ui/colors.dart';
+import 'package:whatsapp_responsive_ui/responsive/responsive_layout.dart';
+import 'package:whatsapp_responsive_ui/screens/mobile_screen_layout.dart';
+import 'package:whatsapp_responsive_ui/screens/web_screen_layout.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ResponsiveWhatsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ResponsiveWhatsApp extends StatelessWidget {
+  const ResponsiveWhatsApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Whats app responsive UI',
-      home: Text('test app'),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: AppColors.backgroundColor,
+        iconButtonTheme: const IconButtonThemeData(
+          style: ButtonStyle(
+            iconColor: WidgetStatePropertyAll(
+              AppColors.greyColor,
+            ),
+          ),
+        ),
+      ),
+      home: const ResponsiveLayout(
+        webScreenLayout: WebScreenLayout(),
+        mobileScreenLayout: MobileScreenLayout(),
+      ),
     );
   }
 }
