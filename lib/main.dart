@@ -16,7 +16,7 @@ class ResponsiveWhatsApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Whats app responsive UI',
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.dark(useMaterial3: false).copyWith(
         scaffoldBackgroundColor: AppColors.backgroundColor,
         iconButtonTheme: const IconButtonThemeData(
           style: ButtonStyle(

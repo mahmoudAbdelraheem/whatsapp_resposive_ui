@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_responsive_ui/colors.dart';
-import 'package:whatsapp_responsive_ui/widgets/search_text_field.dart';
+import 'package:whatsapp_responsive_ui/widgets/web/search_text_field.dart';
 
 class WebSearchBar extends StatelessWidget {
   const WebSearchBar({super.key});

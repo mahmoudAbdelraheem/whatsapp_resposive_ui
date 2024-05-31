@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_responsive_ui/colors.dart';
+import 'package:whatsapp_responsive_ui/screens/mobile_chat_screen.dart';
 
 class UserCard extends StatelessWidget {
   final Map<String, String> userData;
@@ -8,7 +9,14 @@ class UserCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MobileChatScreen(userData: userData),
+          ),
+        );
+      },
       child: Padding(
         padding: const EdgeInsets.only(bottom: 8),
         child: ListTile(
