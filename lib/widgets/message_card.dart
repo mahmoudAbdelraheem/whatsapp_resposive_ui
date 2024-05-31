@@ -18,7 +18,7 @@ class MessageCard extends StatelessWidget {
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
       child: ConstrainedBox(
         constraints: BoxConstraints(
-          maxHeight: MediaQuery.of(context).size.width - 45,
+          maxHeight: MediaQuery.of(context).size.width - 50,
         ),
         child: Card(
           elevation: 1,

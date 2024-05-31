@@ -25,10 +25,12 @@ class MobileScreenLayout extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.search),
+              color: AppColors.greyColor,
             ),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.more_vert),
+              color: AppColors.greyColor,
             ),
           ],
           bottom: const TabBar(
@@ -46,6 +48,14 @@ class MobileScreenLayout extends StatelessWidget {
           ),
         ),
         body: const ContactsList(),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: AppColors.tabColor,
+          onPressed: () {},
+          child: const Icon(
+            Icons.comment,
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }

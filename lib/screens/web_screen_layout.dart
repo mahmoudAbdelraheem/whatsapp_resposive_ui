@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:whatsapp_responsive_ui/colors.dart';
 import 'package:whatsapp_responsive_ui/widgets/chat_list.dart';
 import 'package:whatsapp_responsive_ui/widgets/contacts_list.dart';
-import 'package:whatsapp_responsive_ui/widgets/web_chat_app_bar.dart';
-
-import '../widgets/web_profile_bar.dart';
-import '../widgets/web_search_bar.dart';
+import 'package:whatsapp_responsive_ui/widgets/web/web_chat_app_bar.dart';
+import '../widgets/web/web_profile_bar.dart';
+import '../widgets/web/web_search_bar.dart';
 
 class WebScreenLayout extends StatelessWidget {
   const WebScreenLayout({super.key});
@@ -109,7 +107,7 @@ class WebScreenLayout extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )
               ],
             ),
           )
