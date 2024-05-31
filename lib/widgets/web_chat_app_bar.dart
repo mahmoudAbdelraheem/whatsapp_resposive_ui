@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_responsive_ui/colors.dart';
+import 'package:whatsapp_responsive_ui/info.dart';
 
-class WebProfileBar extends StatelessWidget {
-  const WebProfileBar({super.key});
+class WebChatAppBar extends StatelessWidget {
+  const WebChatAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.077,
-      width: MediaQuery.of(context).size.width * 0.30,
+      width: MediaQuery.of(context).size.width * 0.70,
       padding: const EdgeInsets.all(10),
-      decoration: const BoxDecoration(
-        border: Border(
-          right: BorderSide(
-            color: AppColors.dividerColor,
-          ),
-        ),
-        color: AppColors.webAppBarColor,
-      ),
+      color: AppColors.webAppBarColor,
       child: Row(
         children: [
           Container(
@@ -32,9 +26,26 @@ class WebProfileBar extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(left: 5),
+            child: Text(
+              info[0]['name'].toString(),
+              style: const TextStyle(fontSize: 18),
+            ),
+          ),
           const Spacer(),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.comment)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.search),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.more_vert),
+              ),
+            ],
+          ),
         ],
       ),
     );

@@ -8,11 +8,11 @@ class SearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.all(10),
+        contentPadding: const EdgeInsets.all(5),
         filled: true,
         fillColor: AppColors.searchBarColor,
         prefixIcon: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Icon(
             Icons.search,
             size: 20,
@@ -21,7 +21,7 @@ class SearchTextField extends StatelessWidget {
         hintText: 'Search or start new chat',
         hintStyle: const TextStyle(fontSize: 14),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(
             width: 0,
             style: BorderStyle.none,
